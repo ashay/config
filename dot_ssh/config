@@ -1,0 +1,16 @@
+Include config.d/device.config
+
+Host emu
+	User git
+	Hostname github.com
+	IdentityFile C:/Users/raneashay/.ssh/emu-id_ed25519
+
+Host per
+	User git
+	Hostname github.com
+	IdentityFile C:/Users/raneashay/.ssh/per-id_ed25519
+
+Host hub
+	User git
+	Hostname github.com
+	IdentityFile C:/Users/raneashay/.ssh/id_ed25519

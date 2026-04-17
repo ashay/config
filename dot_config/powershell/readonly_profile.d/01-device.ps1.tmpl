@@ -1,0 +1,19 @@
+# --- device specific customizations --- #
+
+$env:SPUR_HOME = "{{ .spur_home }}"
+function spur-setup  { python $env:SPUR_HOME\tools\spur-setup.py @args }
+function spur-build  { python $env:SPUR_HOME\tools\spur-build.py @args }
+function spur-reconf { python $env:SPUR_HOME\tools\spur-build.py --reconfigure @args }
+function spur-test   { python $env:SPUR_HOME\tools\spur-test.py @args }
+function cdn         { cd '{{ .notes_dir }}' }
+
+$env:TREES_ROOT = '{{ .trees_root }}'
+$env:META_ROOT  = '{{ .meta_root }}'
+$env:REPOS_ROOT = '{{ .repos_root }}'
+$env:PS_COLOR_THEME = '{{ .color_theme }}'
+
+function Set-DevEnv {
+  $vsPath = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -property installationPath
+  Import-Module "$vsPath\Common7\Tools\Microsoft.VisualStudio.DevShell.dll"
+  Enter-VsDevShell -VsInstallPath $vsPath -SkipAutomaticLocation -Arch {{ .native_arch }}
+}

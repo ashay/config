@@ -1,0 +1,28 @@
+set colorcolumn=80    " Highlight column at 80
+set textwidth=80      " Wrap at column 80
+set tabstop=2         " number of visual spaces per TAB
+set softtabstop=2     " number of spaces in tab when editing
+set shiftwidth=2      " number of spaces to use for autoindent
+set expandtab         " tabs are space
+set autoindent
+set copyindent        " copy indent from the previous line
+set autoread          " automatically read file when it changes
+set foldmethod=manual " manual fold
+set guicursor=        " don't replace the existing cursor
+set mouse=            " mouse clicks do nothing
+
+set background={{ .color_theme }}
+colorscheme retrobox
+
+augroup Binary
+  autocmd!
+  autocmd BufReadPre  *.bin let &bin=1
+  autocmd BufReadPost *.bin if &bin | %!xxd -g1 | cut --delimiter=" " --fields=1-17
+  autocmd BufReadPost *.bin set bin | endif
+
+  autocmd BufWritePre *.bin if &bin | %!xxd -r
+  autocmd BufWritePre *.bin endif
+
+  autocmd BufWritePost *.bin if &bin | %!xxd -g1 | cut --delimiter=" " --fields=1-17
+  autocmd BufWritePost *.bin set nomod | endif
+augroup END

@@ -1,0 +1,124 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "ssh_connections": [
+    {
+      "host": "lab-linux-x64",
+      "args": [],
+      "projects": [
+        {
+          "paths": [
+            "/home/JEG/raneashay/src"
+          ]
+        }
+      ]
+    }
+  ],
+  "file_scan_exclusions": [
+    "*.d",
+    "*.jtr",
+    "*.class",
+    "**/.git",
+    "**/.svn",
+    "**/.DS_Store",
+    "**/Thumbs.db",
+    "build",
+    "working-dir",
+    "workdir-crimson",
+  ],
+  "format_on_save": "off",
+  "agent": {
+    "dock": "right",
+    "default_profile": "write",
+    "favorite_models": [
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5-mini",
+        "enable_thinking": false
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gpt-5.2",
+        "enable_thinking": false
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.6",
+        "enable_thinking": false
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "claude-opus-4.6-1m",
+        "enable_thinking": false
+      },
+      {
+        "provider": "copilot_chat",
+        "model": "gemini-3.1-pro-preview",
+        "enable_thinking": false
+      }
+    ],
+    "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "copilot_chat",
+      "model": "claude-opus-4.6",
+    },
+    "model_parameters": [],
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false,
+  },
+  "buffer_font_features": {
+    "calt": false,
+  },
+  "vim_mode": true,
+  "ui_font_size": 17,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light",
+    "dark": "Gruvbox Dark",
+  },
+  "edit_predictions": {
+    "provider": "none",
+    "mode": "subtle",
+    "enabled_in_text_threads": false,
+  },
+  "git": {
+    "enable_status": false,
+    "inline_blame": {
+      "enabled": false,
+    },
+  },
+  "project_panel": {
+    "starts_open": false,
+  },
+  "outline_panel": {
+    "button": false,
+  },
+  "collaboration_panel": {
+    "button": false,
+  },
+  "git_panel": {
+    "button": true,
+  },
+  "notification_panel": {
+    "button": false,
+  },
+  "wrap_guides": [80],
+  "languages": {
+    "C++": {
+      "tab_size": 2,
+    },
+    "Java": {
+      "tab_size": 4,
+    },
+  },
+}

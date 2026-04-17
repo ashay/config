@@ -1,0 +1,47 @@
+[core]
+	editor = nvim
+	sshCommand = C:/Windows/System32/OpenSSH/ssh.exe
+	longpaths = true
+
+[user]
+	name = Ashay Rane
+	email = 253344819+raneashay@users.noreply.github.com
+	signingkey = 33985E983ABAFBAA8059D3AFFEC7A8C8FA893F9E
+
+[gpg]
+	program = C:\\Program Files\\GnuPG\\bin\\gpg.exe
+
+[commit]
+	gpgsign = true
+	verbose = true
+	cleanup = scissors
+
+[pull]
+	rebase = true
+
+[push]
+	default = current
+
+[merge]
+	conflictstyle = zdiff3
+
+[rerere]
+	enabled = true
+
+[help]
+	autocorrect = prompt
+
+[diff]
+	algorithm = histogram
+
+[transfer]
+	fsckobjects = true
+
+[fetch]
+	fsckobjects = true
+
+[receive]
+	fsckObjects = true
+
+[rebase]
+	updateRefs = true

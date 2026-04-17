@@ -1,0 +1,58 @@
+{
+    {{ if eq .color_theme "light" }}"workbench.colorTheme": "Solarized Light",{{ else }}"workbench.colorTheme": "Solarized Dark",{{ end }}
+    "editor.allowVariableFonts": false,
+    "telemetry.telemetryLevel": "off",
+    "editor.rulers": [
+        80
+    ],
+    "workbench.colorCustomizations": {
+        "editorRuler.foreground": "#890000"
+    },
+    "editor.cursorBlinking": "solid",
+    "editor.minimap.enabled": false,
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "vim.useSystemClipboard": true,
+    "vim.handleKeys": {
+        "<C-p>": false
+    },
+    "[plaintext]": {
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "editor.wordBasedSuggestions": "off",
+        "editor.suggest.showSnippets": false,
+        "editor.suggest.showWords": false,
+        "editor.acceptSuggestionOnCommitCharacter": false,
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
+    },
+    "[markdown]": {
+        "editor.acceptSuggestionOnCommitCharacter": false,
+        "editor.suggest.showSnippets": false,
+        "editor.suggest.showWords": false,
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
+        "editor.unicodeHighlight.ambiguousCharacters": false,
+        "editor.unicodeHighlight.invisibleCharacters": false,
+        "editor.wordBasedSuggestions": "off",
+    },
+    "editor.fontFamily": "'Monaspace Argon Frozen', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 13,
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "editor.minimap.renderCharacters": false,
+    "extensions.ignoreRecommendations": true,
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.startupEditor": "none",
+    "chat.viewSessions.orientation": "stacked",
+}
